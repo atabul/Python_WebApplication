@@ -1,0 +1,9 @@
+...............>>>All commands for Django<<<...............
+
+1. go to your project and open cmd prompt
+2. Activate Scripts as "..\Scripts\activate"
+3. for runserver type "python manage.py runserver"
+4. to see homepage just copy url from cmd prompt and paste chrome 
+5. to see adminpannel just copy url and attach admin in url by giving / from cmd prompt and paste chrome
+6. for any change in files  then push it on application type "python manage.py makemigrations"
+7. and for migrate just type "python manage.py migrate"
