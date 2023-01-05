@@ -1,0 +1,12 @@
+{% extends 'clientbase.html' %} 
+{% block title %}NEWSDETAIL{% endblock %} 
+{% block content %} 
+
+<h3>{{newsdetail.title}}</h3>
+<br>
+
+<p style="color:blueviolet;">{{newsdetail.content}}</p> 
+<br>
+view count: {{newsdetail.viewed}}
+<img src="{{newsdetail.image.url}}",alt="">
+{% endblock %}

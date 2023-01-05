@@ -14,6 +14,25 @@ class Category(TimeStamp):
     image=models.ImageField(upload_to="category/", null=True, blank=True)
 
     def __str__(self):
+        return self.title 
+
+class News(TimeStamp):
+    title=models.CharField(max_length=200)
+    category=models.ForeignKey(
+        Category, on_delete=models.CASCADE, related_name='allnews')
+    content=models.TextField(null=True, blank=True)
+    image=models.ImageField(upload_to='news/')
+    author=models.ForeignKey(User, on_delete=models.CASCADE)
+    viewed=models.PositiveIntegerField(default=1)
+
+    class Newsdetail(TimeStamp):
+        title=models.CharField(max_length=200)
+        viewed=models.PositiveIntegerField(default=1)
+        
+    def __str__(self):
         return self.title
+
+
+    
 
 # Create your models here.
