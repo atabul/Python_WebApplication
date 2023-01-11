@@ -1,0 +1,8 @@
+{% extends 'clientbase.html' %} 
+{% block content %} 
+<form method = "POST" enctype="multipart/form-data">
+    {% csrf_token %} 
+    <p>Are you sure to delete "{{news}}"</p>
+    <button>Delete</button>
+</form>
+{% endblock %}

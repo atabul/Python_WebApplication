@@ -1,15 +1,11 @@
 {% extends 'clientbase.html' %} 
 {% block title %}NEWS{% endblock %} 
 {% block content %} 
-<h1>HomePage</h1> 
-<ul>
-    {% for c in categories %} 
-    <li> 
-        {{c.title}}
-    </li>
-    {% endfor %}
-</ul>
-<h2> All News</h2>
+<blockquote class="blockquote text-center">
+    <p class="mb-0">
+        <h1 class="display-6">AllNews</h1>
+    </p>
+  </blockquote> 
 <ui>
     {% for c in news %} 
     <li><a href="/news/{{c.id}}/detail/">{{c.title}}</a></li>

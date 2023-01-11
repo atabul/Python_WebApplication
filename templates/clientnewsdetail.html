@@ -1,7 +1,8 @@
 {% extends 'clientbase.html' %} 
 {% block title %}NEWSDETAIL{% endblock %} 
 {% block content %} 
-
+<a href="/news/update/{{newsdetail.id}}/">UpdateNews</a>
+<a href="/news/delete/{{newsdetail.id}}/">DeleteNews</a>
 <h3>{{newsdetail.title}}</h3>
 <br>
 
