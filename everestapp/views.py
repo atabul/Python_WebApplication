@@ -59,7 +59,17 @@ class AdminLoginView(FormView):
         return super().form_valid(form)
 
 
-    
+class AdminLogoutView(View):
+    success_message="Logged out Successfully"
+
+    def get(self,request,**kwargs):
+        if request.user.is_authenticated:
+            logout(request)
+            return redirect('everestapp:clienthome')
+        else:
+            raise Http404
+
+
 
 
 class ClientNewsCreateView(AdminRequiredMixin,CreateView):

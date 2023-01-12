@@ -1,5 +1,6 @@
 from .models import *
 from django import forms
+from django_summernote.widgets import SummernoteWidget
 
 class ClientNewsCreateForm(forms.ModelForm):
     class Meta:
@@ -13,6 +14,13 @@ class ClientNewsCreateForm(forms.ModelForm):
             'category':forms.Select(),
             #'contebt':form.Textarea(attrs={
             #   'class':'form-control.summernote',}),
+            'content': SummernoteWidget(attrs={
+                'summernote': {
+                    'class':'form_control form-control-rounded',
+                    'placeholder': 'Page Description',
+                    
+                }
+            }),
             'image': forms.ClearableFileInput(),
         }
 
@@ -26,3 +34,5 @@ class AdminLoginForm(forms.Form):
         'class': 'form-control',
         'placeholder': "Enter your password..."
     }))
+
+    

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-85*5%)p11tuivpkt=@1klujcejuccojszp+4g0_bz^4bh@kdy0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'everestapp',
+    'django_summernote'
 ]
 
 MIDDLEWARE = [
